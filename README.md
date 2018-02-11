@@ -7,7 +7,7 @@
 
 ### 1. 背景
 
-本文主要介绍多标签的图像分类标定工具label_tool_classification_multilabel [3]使用流程，代码基于开源目标标定工具BBox-Label-Tool [1]及多类别的目标检测框标定工具label_tool_detection[2]修改。
+本文主要介绍多标签的图像分类标定工具label_tool_classification_multilabel 使用流程，代码基于开源目标标定工具BBox-Label-Tool [1]及多类别的目标检测框标定工具label_tool_detection[2]修改。
 
 通过使用label_tool_classification_multilabel，可以对单张图像进行多个属性的标定，进而应用于多标签、多任务训练。通过label_tool_detection标定保存的图像标定结果.txt内容格式：
 
@@ -57,28 +57,27 @@ besides, I add some new fuctions as follows when comparing with BBox-Label-Tool:
 ### 2. 参考文献
 
 1. 	https://github.com/puzzledqs/BBox-Label-Tool
-1. 	https://g.hz.netease.com/nisp-AI-projects/label_tool_detection
-1. 	https://g.hz.netease.com/nisp-AI-projects/label_tool_classification_multilabel
-1. 	多类别的目标检测框标定工具BBox-Label-Tool使用流程
+1. 	https://github.com/humengdoudou/label_tool_detection
+
 
 ### 3. 图像的收集标定与格式转换
-本小节主要介绍图像的收集与标定流程、标定结果的校验、训练测试图像列表的生成等步骤，相关代码可以参照label_tool_classification_multilabel [3]项目中的代码。
+本小节主要介绍图像的收集与标定流程、标定结果的校验、训练测试图像列表的生成等步骤，相关代码可以参照项目中的代码。
 
 #### 3.1 图像收集 
 图像的收集比较简单，我们使用label_tool_detection完成智能服饰识别中的服饰图像标定，图像主要来自于淘宝图像、百度街拍图片等，直接使用爬虫收集图片即可，图像风格类似图2。
 
-<div align=left><img width="600" height="450" src="https://g.hz.netease.com/hzhumeng01/label_tool_classification_multilabel/raw/master/sups_img_for_readme/1.png"/></div>
+<div align=left><img width="600" height="450" src="https://github.com/humengdoudou/label_tool_classification_multilabel/blob/master/sups_img_for_readme/1.png?raw=true"/></div>
 
 图1 label_tool_detection标定结果示意图
 
-<div align=left><img width="500" height="360" src="https://g.hz.netease.com/hzhumeng01/label_tool_classification_multilabel/raw/master/sups_img_for_readme/2.png"/></div>
+<div align=left><img width="500" height="360" src="https://github.com/humengdoudou/label_tool_classification_multilabel/blob/master/sups_img_for_readme/2.png?raw=true"/></div>
 图2 用于label_tool_classification_multilabel标定图像示意图
 
 #### 3.2 图像的标定
 
 标定使用label_tool_classification_multilabel完成标定，一张图像标定结果示意如图3所示：
 
-<div align=left><img width="650" height="350" src="https://g.hz.netease.com/hzhumeng01/label_tool_classification_multilabel/raw/master/sups_img_for_readme/3.png"/></div>
+<div align=left><img width="650" height="350" src="https://github.com/humengdoudou/label_tool_classification_multilabel/blob/master/sups_img_for_readme/3.png?raw=true"/></div>
 
 图3 label_tool_classification_multilabel结果示意图
 
@@ -86,7 +85,7 @@ besides, I add some new fuctions as follows when comparing with BBox-Label-Tool:
 
 系统的标签与图片组织路径如图4所示，label_tool.py放在label_tool_classification_multilabel的根目录，JPEGImages下按子文件夹目录存放.jpg/.jpeg图片，Labels存放标注好的.txt标签文件。JPEGImages、Labels存放相同的子目录文件即可，例如截图中所示的coat文件夹，该文件夹需要手动新建。目前暂未使用到Annotations、Examples文件夹
 
-<div align=left><img width="280" height="350" src="https://g.hz.netease.com/hzhumeng01/label_tool_classification_multilabel/raw/master/sups_img_for_readme/4.png"/></div>
+<div align=left><img width="280" height="350" src="https://github.com/humengdoudou/label_tool_classification_multilabel/blob/master/sups_img_for_readme/4.png?raw=true"/></div>
 
 图4 标定工具文件组织格式
 
@@ -115,7 +114,7 @@ besides, I add some new fuctions as follows when comparing with BBox-Label-Tool:
 
 #### 4.1 使用代码列表清单
 
-直接查看参考文献[3]即可。
+直接查看本git即可。
 
 ### 5. 修订明细
 
